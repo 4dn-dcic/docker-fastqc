@@ -6,7 +6,7 @@ services:
   - docker
  
 env:
-  - DOCKER=on LOCAL_NAME=docker-md5_local REMOTE_NAME=duplexa/md5 CWL_NAME_LIST=""
+  - DOCKER=on LOCAL_NAME=docker-fastqc_local REMOTE_NAME=4dn-dcic/fastqc CWL_NAME_LIST=""
 
 install:
   - sudo pip install schema_salad
