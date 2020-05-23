@@ -6,7 +6,7 @@ services:
   - docker
  
 env:
-  - DOCKER=on LOCAL_NAME=docker-fastqc_local REMOTE_NAME=4dn-dcic/fastqc
+  - DOCKER=on LOCAL_NAME=docker-fastqc_local REMOTE_NAME=4dndcic/fastqc
 
 install:
   - sudo pip install schema_salad
