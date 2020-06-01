@@ -152,5 +152,6 @@
     "uuid": "49e96b51-ed6c-4418-a693-d0e9f79adfa5",
     "previous_version": [
         "2324ad76-ff37-4157-8bcc-3ce72b7dace9"
-    ]
+    ],
+    "version upgrade log": "fastqc 0.11.5 -> 0.11.9; input file is no longer copied"
 }
