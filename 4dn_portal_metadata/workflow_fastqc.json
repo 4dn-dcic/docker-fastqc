@@ -90,7 +90,7 @@
             ]
         }
     ],
-    "title": "FastQC v2",
+    "title": "FastQC 0.2.7",
     "status": "released",
     "aliases": [],
     "app_name": "fastqc",
@@ -133,7 +133,7 @@
         }
     ],
     "documents": [],
-    "app_version": "v2",
+    "app_version": "0.2.7",
     "description": "FastQC quality control step for fastq files",
     "submitted_by": "/users/986b362f-4eb6-4a9c-8173-3ab267307e3a/",
     "experiment_types": [
