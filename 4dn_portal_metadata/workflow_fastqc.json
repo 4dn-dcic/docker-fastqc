@@ -1,6 +1,6 @@
 {
     "lab": "/labs/4dn-dcic-lab/",
-    "name": "fastqc-0-11-4-1",
+    "name": "fastqc-0-11-5",
     "award": "/awards/1U01CA200059-01/",
     "steps": [
         {
@@ -93,7 +93,7 @@
     "title": "FastQC v2",
     "status": "released",
     "aliases": [],
-    "app_name": "fastqc-0-11-4-1",
+    "app_name": "fastqc-0-11-5",
     "category": [
         "QC"
     ],
@@ -134,7 +134,6 @@
     ],
     "documents": [],
     "app_version": "v2",
-    "cwl_pointer": "https://igor.sbgenomics.com/raw/4dn-dcic/dev/fastqc-0-11-4/0",
     "description": "FastQC quality control step for fastq files",
     "submitted_by": "/users/986b362f-4eb6-4a9c-8173-3ab267307e3a/",
     "experiment_types": [
@@ -143,12 +142,9 @@
         "Repli-seq"
     ],
     "cwl_directory_url": "https://raw.githubusercontent.com/4dn-dcic/docker-fastqc/v2/cwl/",
-    "cwl_main_filename": "fastqc-0-11-4-1.cwl",
+    "cwl_main_filename": "fastqc-0-11-5.cwl",
     "docker_image_name": "4dndcic/fastqc:v2",
     "workflow_language": "CWL",
-    "cwl_child_filenames": [
-        "fastqc-0-11-4.cwl"
-    ],
     "docker_registry_url": "https://hub.docker.com/",
     "alternate_accessions": [],
     "cwl_directory_url_v1": "https://raw.githubusercontent.com/4dn-dcic/docker-fastqc/v2/cwl/",
