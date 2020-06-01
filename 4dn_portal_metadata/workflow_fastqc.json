@@ -7,7 +7,7 @@
             "meta": {
                 "description": "FastQC QC for fastq files",
                 "software_used": [
-                    "/softwares/02d636b9-d82d-4da9-950c-2ca994a13131/"
+                    "/softwares/efdac7ec-7da3-4f23-9056-7a04abbc5e8b/"
                 ],
                 "analysis_step_types": [
                     "QC calculation"
