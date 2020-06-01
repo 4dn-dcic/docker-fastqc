@@ -35,7 +35,7 @@ ENV LANG=C.UTF-8
 
 # wrapper
 COPY scripts/ .
-RUN chmod +x run-fastqc.sh
+RUN chmod +x run.sh
 
 # default command
 CMD ["bash"]
