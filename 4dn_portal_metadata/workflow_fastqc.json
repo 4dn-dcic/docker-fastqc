@@ -136,14 +136,7 @@
     "app_version": "v1",
     "cwl_pointer": "https://igor.sbgenomics.com/raw/4dn-dcic/dev/fastqc-0-11-4/0",
     "description": "FastQC quality control step for fastq files",
-    "date_created": "2017-05-09T07:21:37.091916+00:00",
     "submitted_by": "/users/986b362f-4eb6-4a9c-8173-3ab267307e3a/",
-    "last_modified": {
-        "modified_by": "/users/986b362f-4eb6-4a9c-8173-3ab267307e3a/",
-        "date_modified": "2019-08-07T19:11:39.930761+00:00"
-    },
-    "public_release": "2018-06-12",
-    "project_release": "2018-03-30",
     "experiment_types": [
         "Hi-C",
         "Capture Hi-C",
