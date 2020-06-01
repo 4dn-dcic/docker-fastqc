@@ -15,8 +15,7 @@ The soure files for FastQC `v1` (`0.2.0`) can be found in https://github.com/4dn
 * [Benchmarking tools](#benchmarking-tools)
 * [Sample data](#sample-data)
 * [Tool wrappers](#tool-wrappers)
-  * [run-list.sh](#run-listsh)
-  * [run-fastqc.sh](#run-fastqcsh)
+  * [run.sh](#run-fastqcsh)
 
 
 ## Cloning the repo
@@ -58,23 +57,20 @@ Sample data files that can be used for testing the tools are included in the `sa
 
 ## Tool wrappers
 
-Tool wrappers are under the `scripts` directory and follow naming conventions `run-xx.sh`. These wrappers are copied to the docker image at built time and may be used as a single step in a workflow.
+Tool wrappers are under the `scripts` directory and follow naming conventions `run*.sh`. These wrappers are copied to the docker image at built time and may be used as a single step in a workflow.
 
 ```
 # default
 docker run 4dndcic/fastqc:v2
 
 # specific run command
-docker run 4dndcic/fastqc:v2 <run-xx.sh> <arg1> <arg2> ...
+docker run 4dndcic/fastqc:v2 <run_script> <arg1> <arg2> ...
 
 # may need -v option to mount data file/folder if they are used as arguments.
-docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/fastqc:v2 <run-xx.sh> /d1/file1 /d2/file2 ...
+docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/fastqc:v2 <run_script> /d1/file1 /d2/file2 ...
 ```
 
-### run-list.sh
-Default command for this docker image. It lists the run commands available.
-
-### run-fastqc.sh
+### run.sh
 Runs fastqc on a given fastq(.gz) file and produces a fastqc report.
 * Input: a fastq file (either gzipped or not)
 * Output: a fastqc report (data_report.zip)
@@ -82,7 +78,7 @@ Runs fastqc on a given fastq(.gz) file and produces a fastqc report.
 #### Usage
 Run the following in the container
 ```
-run-fastqc.sh <input_fastq> <nthread> <outdir>
+run.sh <input_fastq> <nthread> <outdir>
 # input_fastq : an input fastq file, either gzipped or not.
 # nthread : number of threads to use
 # outdir : output directory (This should be a mounted host directory, so that the output files are visible from the host and to avoid any bus error)
