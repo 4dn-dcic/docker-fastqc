@@ -1,10 +1,25 @@
 ## source file for 4dndcic/fastqc:v2
 
-FROM duplexa/4dn-hic:v32
+FROM ubuntu:16.04
 MAINTAINER Soo Lee (duplexa@gmail.com)
 
 # 1. general updates & installing necessary Linux components
-RUN apt-get update -y && apt-get install -y wget unzip less vim bzip2 make gcc zlib1g-dev libncurses-dev git libkrb5-3 libpng12-0
+RUN apt-get update -y && apt-get install -y \
+    bzip2 \
+    gcc \
+    git \
+    less \
+    libncurses-dev \
+    make \
+    time \
+    unzip \
+    vim \
+    wget \
+    zlib1g-dev \
+    liblz4-tool
+
+# installing java (for nozzle) - latest java version
+RUN apt-get update -y && apt-get install -y default-jdk 
 
 # download tools
 WORKDIR /usr/local/bin
@@ -12,10 +27,16 @@ COPY downloads.sh .
 RUN . downloads.sh
 
 # set path
+ENV PATH=/usr/local/bin/FastQC/:$PATH
+
+# supporting UTF-8
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
 
 # wrapper
-COPY run.sh .
-RUN chmod +x run.sh
+COPY scripts/ .
+RUN chmod +x run-fastqc.sh
 
 # default command
-CMD ["run.sh"]
+CMD ["bash"]
+
