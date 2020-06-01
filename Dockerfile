@@ -1,4 +1,4 @@
-## source file for 4dndcic/fastqc:v1
+## source file for 4dndcic/fastqc:v2
 
 FROM duplexa/4dn-hic:v32
 MAINTAINER Soo Lee (duplexa@gmail.com)
