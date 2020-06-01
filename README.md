@@ -30,12 +30,12 @@ Major software tools used inside the docker container are downloaded by the scri
 The `downloads.sh` file also contains comment lines that specifies the name and version of individual software tools.
 
 ## Building docker image
-You need docker daemon to rebuild the docker image. If you want to push it to a different docker repo, replace duplexa/4dn-hic:v43 with your desired docker repo name. You need permission to push to duplexa/4dn-hic:v43.
+You need docker daemon to rebuild the docker image. If you want to push it to a different docker repo, replace `4dndcic/fastqc:v2` with your desired docker repo name. You need permission to push to `4dndcic/fastqc:v2`.
 ```
 docker build -t 4dndcic/fastqc:v2 .
 docker push 4dndcic/fastqc:v2
 ```
-You can skip this if you want to use an already built image on docker hub (image name duplexa/4dn-hic:v43). The command 'docker run' (below) automatically pulls the image from docker hub.
+You can skip this if you want to use an already built image on docker hub (image name `4dndcic/fastqc:v2`). The command 'docker run' (below) automatically pulls the image from docker hub.
 
 
 ## Benchmarking tools
