@@ -6,7 +6,7 @@ services:
   - docker
  
 env:
-  - DOCKER=on LOCAL_NAME=docker-md5_local REMOTE_NAME=duplexa/md5 CWL_NAME_LIST=""
+  - DOCKER=on LOCAL_NAME=docker-fastqc_local REMOTE_NAME=4dndcic/fastqc
 
 install:
   - sudo pip install schema_salad
@@ -14,11 +14,8 @@ install:
 script:
   - if [ "$DOCKER" == "on" ]; then
       docker build -t $LOCAL_NAME .;
-      source tests/tests.sh;
+      . tests/tests.sh;
     fi;
-    for CWL_NAME in $CWL_NAME_LIST; do
-       source tests/tests_cwl.sh $CWL_NAME;
-    done
 
 after_success:
   - if [ "$DOCKER" == "on" ]; then

@@ -1,0 +1,13 @@
+{
+    "lab": "/labs/4dn-dcic-lab/",
+    "name": "fastqc",
+    "award": "/awards/1U01CA200059-01/",
+    "title": "fastqc_0.11.9",
+    "status": "released",
+    "version": "0.11.9",
+    "submitted_by": "/users/986b362f-4eb6-4a9c-8173-3ab267307e3a/",
+    "software_type": [
+        "quality metric generator"
+    ],
+    "uuid": "efdac7ec-7da3-4f23-9056-7a04abbc5e8b"
+}
