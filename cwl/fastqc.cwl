@@ -2,11 +2,11 @@
   "hints": [
     {
       "class": "DockerRequirement",
-      "dockerPull": "4dndcic/fastqc:v2"
+      "dockerPull": "duplexa/4dn-hic:v32"
     }
   ],
   "baseCommand": [
-    "run.sh"
+    "run-fastqc.sh"
   ],
   "class": "CommandLineTool",
   "inputs": [
