@@ -2,7 +2,7 @@
   "hints": [
     {
       "class": "DockerRequirement",
-      "dockerPull": "duplexa/4dn-hic:v32"
+      "dockerPull": "4dndcic/fastqc:v1"
     }
   ],
   "baseCommand": [

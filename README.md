@@ -1,15 +1,6 @@
 # docker-fastqc
 
-This repo contains the source files for a docker image stored in `4dndcic/fastqc:v2`.
-
-
-**Note:** The first version of the 4DN FastQC workflow is based on docker image `duplexa/4dn-hic:v32` which is identical to `4dndcic/fastqc:v1`. The updated image/CWL based on the source files in this repo begins with `v2`.
-
-* FastQC `v1` corresponds to 4DN pipeline suite version `0.2.0`.
-* FastQC `v2` corresponds to 4DN pipeline suite version `0.2.7`.
-
-The soure files for FastQC `v1` (`0.2.0`) can be found in https://github.com/4dn-dcic/docker-4dn-hic/tree/v32 and https://github.com/4dn-dcic/pipelines-cwl/releases/tag/0.2.0.
-
+This repo contains the source files for a docker image stored in `4dndcic/fastqc:v1`.
 
 ## Table of contents
 * [Cloning the repo](#cloning-the-repo)
@@ -18,7 +9,7 @@ The soure files for FastQC `v1` (`0.2.0`) can be found in https://github.com/4dn
 * [Benchmarking tools](#benchmarking-tools)
 * [Sample data](#sample-data)
 * [Tool wrappers](#tool-wrappers)
-  * [run.sh](#run-fastqcsh)
+  * [run-fastqc.sh](#run-fastqcsh)
 
 
 ## Cloning the repo
@@ -32,18 +23,18 @@ Major software tools used inside the docker container are downloaded by the scri
 The `downloads.sh` file also contains comment lines that specifies the name and version of individual software tools.
 
 ## Building docker image
-You need docker daemon to rebuild the docker image. If you want to push it to a different docker repo, replace `4dndcic/fastqc:v2` with your desired docker repo name. You need permission to push to `4dndcic/fastqc:v2`.
+You need docker daemon to rebuild the docker image. If you want to push it to a different docker repo, replace `4dndcic/fastqc:v1` with your desired docker repo name. You need permission to push to `4dndcic/fastqc:v1`.
 ```
-docker build -t 4dndcic/fastqc:v2 .
-docker push 4dndcic/fastqc:v2
+docker build -t 4dndcic/fastqc:v1 .
+docker push 4dndcic/fastqc:v1
 ```
-You can skip this if you want to use an already built image on docker hub (image name `4dndcic/fastqc:v2`). The command 'docker run' (below) automatically pulls the image from docker hub.
+You can skip this if you want to use an already built image on docker hub (image name `4dndcic/fastqc:v1`). The command 'docker run' (below) automatically pulls the image from docker hub.
 
 
 ## Benchmarking tools
 To obtain run time and max mem stats, use `usr/bin/time` that is installed in the docker container. For example, run the following to benchmark `du`.
 ```
-docker run 4dndcic/fastqc:v2 /usr/bin/time du 2> log
+docker run 4dndcic/fastqc:v1 /usr/bin/time du 2> log
 cat log
 ```
 The output looks as follows:
@@ -64,13 +55,13 @@ Tool wrappers are under the `scripts` directory and follow naming conventions `r
 
 ```
 # default
-docker run 4dndcic/fastqc:v2
+docker run 4dndcic/fastqc:v1
 
 # specific run command
-docker run 4dndcic/fastqc:v2 <run_script> <arg1> <arg2> ...
+docker run 4dndcic/fastqc:v1 <run_script> <arg1> <arg2> ...
 
 # may need -v option to mount data file/folder if they are used as arguments.
-docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/fastqc:v2 <run_script> /d1/file1 /d2/file2 ...
+docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/fastqc:v1 <run_script> /d1/file1 /d2/file2 ...
 ```
 
 ### run.sh
@@ -81,7 +72,7 @@ Runs fastqc on a given fastq(.gz) file and produces a fastqc report.
 #### Usage
 Run the following in the container
 ```
-run.sh <input_fastq> <nthread> <outdir>
+run-fastqc.sh <input_fastq> <nthread> <outdir>
 # input_fastq : an input fastq file, either gzipped or not.
 # nthread : number of threads to use
 # outdir : output directory (This should be a mounted host directory, so that the output files are visible from the host and to avoid any bus error)
