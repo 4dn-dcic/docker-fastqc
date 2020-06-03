@@ -64,7 +64,7 @@ docker run 4dndcic/fastqc:v1 <run_script> <arg1> <arg2> ...
 docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/fastqc:v1 <run_script> /d1/file1 /d2/file2 ...
 ```
 
-### run.sh
+### run-fastqc.sh
 Runs fastqc on a given fastq(.gz) file and produces a fastqc report.
 * Input: a fastq file (either gzipped or not)
 * Output: a fastqc report (data_report.zip)
