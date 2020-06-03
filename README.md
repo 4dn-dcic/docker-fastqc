@@ -2,15 +2,6 @@
 
 This repo contains the source files for a docker image stored in `4dndcic/fastqc:v2`.
 
-
-**Note:** The first version of the 4DN FastQC workflow is based on docker image `duplexa/4dn-hic:v32` which is identical to `4dndcic/fastqc:v1`. The updated image/CWL based on the source files in this repo begins with `v2`.
-
-* FastQC `v1` corresponds to 4DN pipeline suite version `0.2.0`.
-* FastQC `v2` corresponds to 4DN pipeline suite version `0.2.7`.
-
-The soure files for FastQC `v1` (`0.2.0`) can be found in https://github.com/4dn-dcic/docker-4dn-hic/tree/v32 and https://github.com/4dn-dcic/pipelines-cwl/releases/tag/0.2.0.
-
-
 ## Table of contents
 * [Cloning the repo](#cloning-the-repo)
 * [Tool specifications](#tool-specifications)
