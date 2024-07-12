@@ -1,6 +1,8 @@
 # docker-fastqc
 
-This repo contains the source files for a docker image stored in `4dndcic/fastqc:v2`.
+_The current version of this pipeline pulls the Docker image from a public AWS Elastic Container Registry. If you prefer to pull from Docker Hub (DH), please use the tagged version utilizing DH: `v2_DH`._
+
+This repo contains the source files for a docker image stored in both `4dndcic/fastqc:v2` and AWS `public.ecr.aws/dcic-4dn/fastqc:v2`.
 
 ## Table of contents
 * [Cloning the repo](#cloning-the-repo)
